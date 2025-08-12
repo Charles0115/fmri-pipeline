@@ -53,8 +53,11 @@ code blocks for commands
 
 ### <u>MatLab</u>
 
+All Matlab files are located in ./matlab-scripts folder. Here I assume that you have already installed MonkeyLogic to MatLab. 
 
 ### <u>Python</u>
+
+All python files are located in ./python-scripts folder. 
 
 ### Set up Virtual Environment
 Virtual Environment is beneficial because you can install packages locally, for this project. If you use IDEs like PyCharm, there's a virtual environment already setup (.venv). Otherwise, you have to create the virtual environment yourself. In case you don't know how, here are the steps. 
@@ -80,12 +83,48 @@ eyepos-threshold-checker.py is used to create an outlier 1D binary file based on
 
 To run this: ```python eyepos-threshold-checker.py```
 
-## Help
+### Directory Tree
 
-Any advise for common problems or issues.
+Here is my dictory tree for FMRI Project on WSL. It is important to create the correct folders and put the files correctly. 
+
 ```
-command to run if program contains helper info
+FMRI Project/
+├── scripts/
+│   ├── script-0710-run-all.tcsh
+│   ├── script-0710-FH.tcsh
+│   ├── script-0710-HF.tcsh
+│   └── ...
+├── python-scripts/ (if you decide to run them on WSL)
+│   ├── .venv/
+│   ├── plot_graphs.py
+│   └── ...
+├── FMRI-ANALYSIS/
+│   ├── sessXXXX/
+│      ├── anat/
+│         ├── sess-xxxx-anat.nii.gz/
+│         ├── sess-xxxx-anat-ss.nii.gz/
+│         └── ...
+│      ├── func/
+│         ├── timing/
+│            ├── xxxx.1D
+│            └── ...
+│         ├── skull-strip/
+│            ├── ss.bash
+│            └── ss-run-all.bash
+│         ├── sess-xxxx-run-xxxx.nii.gz/
+│         ├── sess-xxxx-run-xxxx-ss.nii.gz/
+│         └── ...
 ```
+
+
+
+### <u>Skull Stripping</u>
+
+Here we discuss how to do skull stripping on MRI data. There are two types of data, functional and anatomical (structural). They are treated differently. 
+
+### Functional data
+
+1. Put functional data 
 
 ## Author
 
