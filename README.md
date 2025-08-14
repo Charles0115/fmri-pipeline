@@ -177,6 +177,7 @@ They are treated differently.
    BET doc: https://web.mit.edu/fsl_v5.0.10/fsl/doc/wiki/BET(2f)UserGuide.html
    3. Merge the skull stripped frames into one file using fslmerge
 3. You can use ss-run-all.bash to process all the functional files automatically. 
+4. Once the algorithm finishes, it will make an alarm sound.
 
 #### Structural data
 
@@ -210,9 +211,12 @@ Method 2: 3dSkullStrip from AFNI (good for T2 space)
 ### Executing pipeline
 
 In the "pipeline-scripts" GitHub folder, move all files to "scripts" folder under "FMRI project". Read through the scripts 
-carefully. 
+carefully, making sure you understand each parameter. The output folder is defined in "sdir_ap" parameter, which is located
+inside "sessxxxx" folder. The process normally takes half an hour to 45 minutes to run. Once it finishes, it will make an 
+alarm sound. 
 
-
+The scripts are written in tcsh, not in bash. Therefore, you need to type ```tcsh``` first to get into tcsh mode, and then 
+type ```tcsh xxxx.tcsh``` to run the script. 
 
 
 ### Software Usage
